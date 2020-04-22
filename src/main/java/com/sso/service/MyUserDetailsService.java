@@ -5,8 +5,6 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.sso.domain.MyUser;
 import com.sso.domain.Pvg;
 import com.sso.domain.User;
-import com.sso.service.PvgService;
-import com.sso.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
