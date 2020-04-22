@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sso.mapper.PvgMapper">
+
+    <select id="selPvgByUserEid" resultType="com.sso.domain.Pvg">
+        SELECT
+            p.id,
+            p.pvg_code,
+            p.pvg_name,
+            p.is_disp,
+            p.pvg_lv,
+            p.icon,
+            p.remark,
+            p.pid,
+            p.high,
+            p.creator,
+            p.crt_time,
+            p.updator,
+            p.upt_time,
+            p.pvg_node
+        FROM
+            user_role ur
+        JOIN role r ON ur.role_eid = r.role_eid
+        JOIN role_pvg rp ON r.role_eid = rp.role_eid
+        JOIN pvg p ON rp.pvg_id = p.id
+        WHERE
+            ur.user_eid = #{userEid}
+    </select>
+</mapper>

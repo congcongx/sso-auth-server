@@ -1,0 +1,28 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql://rm-m5ed362439f4ua97mxo.mysql.rds.aliyuncs.com/tongyun_mes?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowMultiQueries=true
+    username: newerp
+    password: sujRJ56EzfeSremK
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+  session:
+    store-type: redis
+  redis:
+    host: 118.190.71.200
+    password: abcdfu5Ymkr8KihRXcGzeqPxjAot9L7np
+    port: 6381
+server:
+  port: 8080
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+logging:
+  level:
+    com.sso: debug
